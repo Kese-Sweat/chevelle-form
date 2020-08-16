@@ -1,0 +1,25 @@
+
+.vehicleHeader{
+    margin: 1%
+}
+.vehicleDetailsRowOne{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 2%;
+    margin: 2%;
+}
+
+.vehicleDetailsRowTwo{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.comments{
+    width: 50%;
+    height: 124px;
+    padding: 0.5%;
+}
+
+.story{
+    margin: 2%;
+}
