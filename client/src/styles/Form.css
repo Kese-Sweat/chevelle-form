@@ -72,6 +72,8 @@
     justify-content: center;
  }
  button{
+    border-color: transparent;
+    outline: none;
     width: 10%;
     height: 40px;
     color: red;

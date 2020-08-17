@@ -13,7 +13,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import TextareaAutosize from '@material-ui/core/TextareaAutosize';
 
 
-function VehicleDetails(props){
+function VehicleDetails(){
     const [form, setFormInput] = useForm({
         chevelle: '',
         year: '',
@@ -27,9 +27,7 @@ function VehicleDetails(props){
         
     })
 
-   
- 
-
+    console.log(form)
     return(<div>
         <form>
         <h1 className="vehicleHeader">Vehicle Details</h1>

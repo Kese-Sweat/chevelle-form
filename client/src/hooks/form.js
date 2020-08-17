@@ -10,5 +10,8 @@ export function useForm(formData) {
     function resetForm(e){
         setForm(obj)
     }
-    return [form, handleForm, resetForm]
+    function setFormTo(o){
+        setForm(o)
+    }
+    return [form, handleForm, resetForm, setFormTo]
 }

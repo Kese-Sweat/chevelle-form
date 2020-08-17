@@ -26,14 +26,17 @@ const [form, setFormInput, resetForm] = useForm({
 
 
 })
-console.log(form)
 
+function myAlert(){
+    alert("Hold up! GET TO STEPPIN! LOL")
+}
 
 
 function handleSubmit(e){
     e.preventDefault()
-    // resetForm()
+    resetForm()
     console.log(form)
+    myAlert()
 }
     return(<div className="Form">
         <div className="formContainer">
@@ -43,7 +46,6 @@ function handleSubmit(e){
         
             <div className="personalDetails">
                 <form onSubmit={handleSubmit} className="formDetails">
-                    {form.first}
                     <h1 className="personalHeader">Personal Information</h1>
                     <div className="personalDetailsRowOne">
                         <TextField
@@ -83,11 +85,11 @@ function handleSubmit(e){
                             variant="outlined"
                         />
                         </div>
-                        {form.state}
+                        
                     <div className='personalDetailsRowTwo'>
                         <FormControl className="dropDowns">
                             <InputLabel>State</InputLabel>
-                            {form.city}
+                            
                             <Select
                                 labelId="demo-simple-select-filled-label"
                                 id="state"
@@ -130,11 +132,9 @@ function handleSubmit(e){
                         />
                     </div>
                     
-                    <VehicleDetails manageForm={() => {
-                        setFormInput()
-                    }}/>
+                    <VehicleDetails onChange={() => setFormInput(e)}/> 
                     <div className="submitButton">
-                    <button type="submit">
+                    <button  type="submit">
                         SUBMIT
                     </button>
                     </div>
